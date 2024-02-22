@@ -35,9 +35,17 @@ router.get('/:id', async (req, res) => {
     let fech = new Date(personaje.created);
     let fecha=fech.toLocaleDateString('Es-es');
 
-    console.log(fecha);
+    let genero=personaje.gender;
 
-    res.render("personajecard", { personaje, fecha });
+    if(genero=='Male'){
+      genero='Masculino';
+    }else if(genero=='Female'){
+      genero='Femenino';
+    }else{
+      genero='Desconocido';
+    }
+
+    res.render("personajecard", { personaje, fecha,genero });
 
   } catch (error) {
     console.error("Error:", error);
