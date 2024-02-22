@@ -1,0 +1,8 @@
+.contenedor,.contenedorP{
+  margin-left: 50px;
+}
+
+.contenedorP p,
+.contenedorP a{
+  font-size: 1rem;
+}

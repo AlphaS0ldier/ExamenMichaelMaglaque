@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    div.contenedor
+        h1 Lista completa
+        ul
+            if personaje
+                each pers in personaje
+                    li
+                        a(href=`./${pers.id}`)=pers.name

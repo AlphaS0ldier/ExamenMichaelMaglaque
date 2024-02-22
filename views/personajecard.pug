@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    div.contenedorP
+        h1 Vista del Personaje
+            if personaje
+                .card(style="width: 18rem;")
+                    img.card-img-top(src=personaje.image, alt="...")
+                    .card-body
+                        h5.card-title=personaje.name
+                        h6.card-subtitle.mb-2.text-body-secondary=personaje.gender
+                        p.card-text=fecha
+                        a.card-link(href=personaje.url) Descargar su ficha (JSON)
+                        p
+                        a.card-link(href="./todos") Lista Completa
